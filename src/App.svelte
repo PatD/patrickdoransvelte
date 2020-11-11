@@ -1,10 +1,10 @@
 <script>
 import { onMount } from 'svelte';
-
+let wordpressUrl = 'https://patrickdoran.com/headless/wp-json/wp/v2/posts';
 let items = [];
 
 onMount(async () => {
-	const res = await fetch(`https://patrickdoran.com/headless/wp-json/wp/v2/posts`);
+	const res = await fetch(wordpressUrl);
 	items = await res.json();
 });
 </script>
