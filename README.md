@@ -1,2 +1,4 @@
 # Svelte component
-Loads a JSON feed from a headless Wordess install.
+Loads GraphQL data from a headless Wordess install into a small Svelte component. 
+
+Expects Wordpress with the WPGraphQL plugin.
