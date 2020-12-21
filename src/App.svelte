@@ -13,9 +13,9 @@ onMount(async () => {
 		},
 		body: JSON.stringify({
 			query: `
-				{
-				posts {
-					edges {
+				{				
+					posts(where: {categoryName: "Speaking Writing"}) {
+						edges {
 						node {
 							excerpt
 							date
@@ -23,8 +23,8 @@ onMount(async () => {
 							title
 							content
 						}
+						}
 					}
-				}
 				}
 			`,
 		}),
@@ -44,7 +44,6 @@ onMount(async () => {
 		
 		filteredItems.push(x.node)
 	})
-
 });
 </script>
 
